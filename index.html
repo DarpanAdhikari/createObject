@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="object modifier">
+  <meta name="author" content="Darpan Adhikari">
+  <meta name="keywords" content="darpan,darpan adhikari, Darpan Adhikari, best portfolio">
+  <link rel="stylesheet" href="additional/creator.css">
+  <title>Object Modifier</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li>Create Blob</li>
+      <li>Linear-gradient</li>
+      <li>Box-shadow</li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="main-field">
+      <div class="scale">
+        <div class="top"><div class="value">0</div>
+      <span></span>
+    </div>
+        <div class="bottom">
+          <div class="value">500</div>
+          <span></span>
+        </div></div>
+      <div class="object">
+        <div class="shape"></div>
+      </div>
+
+      <!-- -------------blob section started------ -->
+      <section class="blobField" id="blobField">
+        <div class="sizeOfObject">
+          <div class="height">
+            <label>Height</label>
+            <input type="int" size="2" value="200" inputmode="numeric"
+              onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+            <label>px</label>
+          </div>
+          <div class="height">
+            <label>width</label>
+            <input type="text" size="2" value="200" inputmode="numeric"
+              onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+            <label>px</label>
+          </div>
+        </div>
+        <div class="blob">
+          <input type="range" title="border-top-left-radius">
+          <input type="range" title="border-top-right-radius">
+          <input type="range" title="border-bottom-right-radius">
+          <input type="range" title="border-bottom-left-radius">
+        </div>
+        <div class="copy-field">
+          <input type="text" readonly>
+          <button id="copyBtn">Copy</button>
+        </div>
+      </section>
+      <!-- -----------gradient section started------- -->
+      <section class="gradientField" id="gradientField">
+        <label>Color variance</label>
+        <input type="text" size="2" value="2" id="colorVariance" inputmode="numeric"
+        onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" style="margin-bottom: 20px;">
+        <div class="button">
+          <button id="generate">Generate</button>
+        </div>
+        <p>*press this(Generate) button to generate Linear-gradient color</p>
+        <div class="copy-field">
+          <input type="text" readonly>
+          <button id="copyBtn">Copy</button>
+        </div>
+      </section>
+
+      <!-- ------------shadow section started-- -->
+      <section class="shadowField" id="gradientField" >
+        <div class="blob">
+          <input type="range" title="Horizontal shadow" value="10">
+          <input type="range" title="Vertical Shadow" value="10">
+          <input type="range" title="Blur Radius" value="10">
+          <input type="range" title="Spread Radius" value="10">
+        </div>
+        <div class="additionalCss">
+          <label>Shadow color:</label>
+          <input type="color">
+          <label>Shadow opacity:</label>
+          <input type="text" size="2" value="1">
+          <label>inset Shadow:</label>
+          <input type="checkbox">
+        </div>
+        <div class="copy-field">
+          <input type="text" readonly>
+          <button id="copyBtn">Copy</button>
+        </div>
+      </section>
+    </div>
+  </div>
+ <button class="viewHistory">View History</button>
+ <div class="history">
+  <h1>History</h1>
+  <span class="drp close">&times;</span>
+  <h4>Blob data</h4>
+  <p class="blobHistory">
+  </p>
+  <h4>Linear-gradient data</h4>
+  <p class="gradientHistory">
+  </p>
+  <h4>Box-Shadow data</h4>
+  <p class="shadowHistory">
+  </p>
+</div>
+<footer>
+  <span><span>&#169;</span><span id="date"></span><a href="https://darpanadhikari.com.np"> DarpanAdhikari</a> || All right reserved</span>
+</footer>
+  <script src="additional/creator.js"></script>
+</body>
+
+</html>
