@@ -47,7 +47,7 @@ function createBlob() {
 
   let finalRadius = `${firstRad}% ${100 - firstRad}% ${100 - thirdRad}% ${thirdRad}% / ${fouthRad}% ${secondRad}% ${100 - secondRad}% ${100 - fouthRad}%`;
 
-  createdObject.style.cssText = `border-radius:${finalRadius}; height:${height}px; width:${width}px;`;
+ createdObject.style.cssText = `border-radius:${finalRadius}; height:${height}px; width:${width}px; ${valueOfResult[2].value};${valueOfResult[1].value};`;
 
   valueOfResult[0].value = `border-radius:${finalRadius}; height:${objectSize[0].value}px; width:${width}px;`;
 
@@ -102,7 +102,7 @@ function multipleColor(gotValue,objectShape) {
     color[i] = getColor();
   }
   let angle = Math.floor(Math.random() * 360);
-  createdObject.style.cssText = `background: linear-gradient(${angle}deg,${color});${objectShape}`;
+  createdObject.style.cssText = `background: linear-gradient(${angle}deg,${color});${objectShape};${valueOfResult[2].value};`;
 
   valueOfResult[1].value = `background: linear-gradient(${angle}deg,${color});`;
   copyBtn[1].addEventListener("click", () => {
@@ -148,6 +148,7 @@ function generateShadow(){
 
   valueOfResult[2].value = finalShadow;
   createdObject.style.cssText = valueOfResult[0].value+valueOfResult[1].value+finalShadow;
+  
   copyBtn[2].addEventListener("click", () => {
     navigator.clipboard.writeText(valueOfResult[2].value);
     copyBtn[2].textContent = "Copied";
